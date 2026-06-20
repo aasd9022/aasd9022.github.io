@@ -1,6 +1,168 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>我的第一篇笔记 | 我的个人博客</title><meta name=keywords content><meta name=description content="我的第一篇笔记 - 我的个人博客"><meta name=author content><link rel=canonical href=https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/><link crossorigin=anonymous href=/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as=style><link rel=icon href=https://aasd9022.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://aasd9022.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://aasd9022.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://aasd9022.github.io/apple-touch-icon.png><link rel=mask-icon href=https://aasd9022.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"><meta property="og:site_name" content="我的个人博客"><meta property="og:title" content="我的第一篇笔记"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-06-20T22:31:42+08:00"><meta property="article:modified_time" content="2026-06-20T22:31:42+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="我的第一篇笔记"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://aasd9022.github.io/posts/"},{"@type":"ListItem","position":2,"name":"我的第一篇笔记","item":"https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"我的第一篇笔记","name":"我的第一篇笔记","description":"","keywords":[],"articleBody":"","wordCount":"0","inLanguage":"en","datePublished":"2026-06-20T22:31:42+08:00","dateModified":"2026-06-20T22:31:42+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"},"publisher":{"@type":"Organization","name":"我的个人博客","logo":{"@type":"ImageObject","url":"https://aasd9022.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=header-nav><div class=logo><a href=https://aasd9022.github.io/ accesskey=h title="我的个人博客 (Alt + H)">我的个人博客</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>从零开始的Windows专属个人博客搭建全攻略（GitHub Pages+Hugo PaperMod） | 我的个人博客</title><meta name=keywords content><meta name=description content="保姆级教程：从零搭建免费Hugo PaperMod个人博客（GitHub永久部署）
+手把手教小白搭建免费、无广告、高颜值、可自动更新的个人博客，基于 Hugo + PaperMod 主题 + GitHub 全自动部署，无需服务器、无需付费，一次搭建永久使用。
+一、核心原理：先搞懂整套博客运行逻辑
+整套博客分为本地编写和云端部署两大模块，零基础也能轻松理解：
+
+
+本地电脑：安装工具、撰写博客文章、实时预览网页效果
+
+
+GitHub云端：自动打包网页代码、生成公开专属网址，全网可访问
+
+
+三件核心工具（人话翻译）：
+
+
+Git：文件传输工具，负责将本地博客文件同步到GitHub云端仓库（云端U盘）
+
+
+Hugo Extended：静态网页生成工具，将纯文本笔记转换成精美网页
+
+
+GitHub：免费代码托管平台，实现网页自动构建、部署、公网访问
+
+
+二、环境准备：电脑必备软件安装（小白零难度）
+1. 安装 Git（代码传输工具）
+
+
+浏览器搜索「Git官网」，下载 Windows 正式版安装包
+
+
+全程默认安装，一路点击 Next，无需修改任何配置
+
+
+安装成功标识：桌面/文件夹右键，出现 Git Bash Here、Git GUI Here 选项
+
+
+
+小贴士：命令行无需手动敲代码，全程复制粘贴指令即可，不用死记命令！
+
+2. 安装 Hugo Extended 扩展版（核心必装）
+重点提醒：必须安装 Extended 扩展版，普通版缺失主题功能，会导致博客报错！
+
+
+打开 Hugo 官方发布页，下载 Windows 端 .zip 压缩包
+
+
+解压压缩包，将内部 hugo.exe 单独放入纯英文无中文路径文件夹，示例：F:\hugo
+
+
+将该文件夹添加到电脑系统环境变量，添加完成后重启 Git Bash
+
+
+验证安装：右键打开 Git Bash，输入 hugo version，输出版本号即安装成功
+
+
+3. 注册 GitHub 账号并创建仓库
+
+
+GitHub 官网邮箱注册账号，用户名建议简短好记（后续仓库名必须和用户名完全一致）
+
+
+新建公开仓库，仓库名称严格遵循固定格式：你的用户名.github.io
+
+
+示例：GitHub 用户名为 xiaobai123，仓库名必须为 xiaobai123.github.io，名称错误会直接导致免费域名失效！"><meta name=author content><link rel=canonical href=https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/><link crossorigin=anonymous href=/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as=style><link rel=icon href=https://aasd9022.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://aasd9022.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://aasd9022.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://aasd9022.github.io/apple-touch-icon.png><link rel=mask-icon href=https://aasd9022.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"><meta property="og:site_name" content="我的个人博客"><meta property="og:title" content="从零开始的Windows专属个人博客搭建全攻略（GitHub Pages+Hugo PaperMod）"><meta property="og:description" content="保姆级教程：从零搭建免费Hugo PaperMod个人博客（GitHub永久部署） 手把手教小白搭建免费、无广告、高颜值、可自动更新的个人博客，基于 Hugo + PaperMod 主题 + GitHub 全自动部署，无需服务器、无需付费，一次搭建永久使用。
+一、核心原理：先搞懂整套博客运行逻辑 整套博客分为本地编写和云端部署两大模块，零基础也能轻松理解：
+本地电脑：安装工具、撰写博客文章、实时预览网页效果
+GitHub云端：自动打包网页代码、生成公开专属网址，全网可访问
+三件核心工具（人话翻译）：
+Git：文件传输工具，负责将本地博客文件同步到GitHub云端仓库（云端U盘）
+Hugo Extended：静态网页生成工具，将纯文本笔记转换成精美网页
+GitHub：免费代码托管平台，实现网页自动构建、部署、公网访问
+二、环境准备：电脑必备软件安装（小白零难度） 1. 安装 Git（代码传输工具） 浏览器搜索「Git官网」，下载 Windows 正式版安装包
+全程默认安装，一路点击 Next，无需修改任何配置
+安装成功标识：桌面/文件夹右键，出现 Git Bash Here、Git GUI Here 选项
+小贴士：命令行无需手动敲代码，全程复制粘贴指令即可，不用死记命令！
+2. 安装 Hugo Extended 扩展版（核心必装） 重点提醒：必须安装 Extended 扩展版，普通版缺失主题功能，会导致博客报错！
+打开 Hugo 官方发布页，下载 Windows 端 .zip 压缩包
+解压压缩包，将内部 hugo.exe 单独放入纯英文无中文路径文件夹，示例：F:\hugo
+将该文件夹添加到电脑系统环境变量，添加完成后重启 Git Bash
+验证安装：右键打开 Git Bash，输入 hugo version，输出版本号即安装成功
+3. 注册 GitHub 账号并创建仓库 GitHub 官网邮箱注册账号，用户名建议简短好记（后续仓库名必须和用户名完全一致）
+新建公开仓库，仓库名称严格遵循固定格式：你的用户名.github.io
+示例：GitHub 用户名为 xiaobai123，仓库名必须为 xiaobai123.github.io，名称错误会直接导致免费域名失效！"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-06-20T22:31:42+08:00"><meta property="article:modified_time" content="2026-06-20T22:31:42+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="从零开始的Windows专属个人博客搭建全攻略（GitHub Pages+Hugo PaperMod）"><meta name=twitter:description content="保姆级教程：从零搭建免费Hugo PaperMod个人博客（GitHub永久部署） 手把手教小白搭建免费、无广告、高颜值、可自动更新的个人博客，基于 Hugo + PaperMod 主题 + GitHub 全自动部署，无需服务器、无需付费，一次搭建永久使用。
+一、核心原理：先搞懂整套博客运行逻辑 整套博客分为本地编写和云端部署两大模块，零基础也能轻松理解：
+本地电脑：安装工具、撰写博客文章、实时预览网页效果
+GitHub云端：自动打包网页代码、生成公开专属网址，全网可访问
+三件核心工具（人话翻译）：
+Git：文件传输工具，负责将本地博客文件同步到GitHub云端仓库（云端U盘）
+Hugo Extended：静态网页生成工具，将纯文本笔记转换成精美网页
+GitHub：免费代码托管平台，实现网页自动构建、部署、公网访问
+二、环境准备：电脑必备软件安装（小白零难度） 1. 安装 Git（代码传输工具） 浏览器搜索「Git官网」，下载 Windows 正式版安装包
+全程默认安装，一路点击 Next，无需修改任何配置
+安装成功标识：桌面/文件夹右键，出现 Git Bash Here、Git GUI Here 选项
+小贴士：命令行无需手动敲代码，全程复制粘贴指令即可，不用死记命令！
+2. 安装 Hugo Extended 扩展版（核心必装） 重点提醒：必须安装 Extended 扩展版，普通版缺失主题功能，会导致博客报错！
+打开 Hugo 官方发布页，下载 Windows 端 .zip 压缩包
+解压压缩包，将内部 hugo.exe 单独放入纯英文无中文路径文件夹，示例：F:\hugo
+将该文件夹添加到电脑系统环境变量，添加完成后重启 Git Bash
+验证安装：右键打开 Git Bash，输入 hugo version，输出版本号即安装成功
+3. 注册 GitHub 账号并创建仓库 GitHub 官网邮箱注册账号，用户名建议简短好记（后续仓库名必须和用户名完全一致）
+新建公开仓库，仓库名称严格遵循固定格式：你的用户名.github.io
+示例：GitHub 用户名为 xiaobai123，仓库名必须为 xiaobai123.github.io，名称错误会直接导致免费域名失效！"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://aasd9022.github.io/posts/"},{"@type":"ListItem","position":2,"name":"从零开始的Windows专属个人博客搭建全攻略（GitHub Pages+Hugo PaperMod）","item":"https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"从零开始的Windows专属个人博客搭建全攻略（GitHub Pages+Hugo PaperMod）","name":"从零开始的Windows专属个人博客搭建全攻略（GitHub Pages\u002bHugo PaperMod）","description":"保姆级教程：从零搭建免费Hugo PaperMod个人博客（GitHub永久部署） 手把手教小白搭建免费、无广告、高颜值、可自动更新的个人博客，基于 Hugo + PaperMod 主题 + GitHub 全自动部署，无需服务器、无需付费，一次搭建永久使用。\n一、核心原理：先搞懂整套博客运行逻辑 整套博客分为本地编写和云端部署两大模块，零基础也能轻松理解：\n本地电脑：安装工具、撰写博客文章、实时预览网页效果\nGitHub云端：自动打包网页代码、生成公开专属网址，全网可访问\n三件核心工具（人话翻译）：\nGit：文件传输工具，负责将本地博客文件同步到GitHub云端仓库（云端U盘）\nHugo Extended：静态网页生成工具，将纯文本笔记转换成精美网页\nGitHub：免费代码托管平台，实现网页自动构建、部署、公网访问\n二、环境准备：电脑必备软件安装（小白零难度） 1. 安装 Git（代码传输工具） 浏览器搜索「Git官网」，下载 Windows 正式版安装包\n全程默认安装，一路点击 Next，无需修改任何配置\n安装成功标识：桌面/文件夹右键，出现 Git Bash Here、Git GUI Here 选项\n小贴士：命令行无需手动敲代码，全程复制粘贴指令即可，不用死记命令！\n2. 安装 Hugo Extended 扩展版（核心必装） 重点提醒：必须安装 Extended 扩展版，普通版缺失主题功能，会导致博客报错！\n打开 Hugo 官方发布页，下载 Windows 端 .zip 压缩包\n解压压缩包，将内部 hugo.exe 单独放入纯英文无中文路径文件夹，示例：F:\\hugo\n将该文件夹添加到电脑系统环境变量，添加完成后重启 Git Bash\n验证安装：右键打开 Git Bash，输入 hugo version，输出版本号即安装成功\n3. 注册 GitHub 账号并创建仓库 GitHub 官网邮箱注册账号，用户名建议简短好记（后续仓库名必须和用户名完全一致）\n新建公开仓库，仓库名称严格遵循固定格式：你的用户名.github.io\n示例：GitHub 用户名为 xiaobai123，仓库名必须为 xiaobai123.github.io，名称错误会直接导致免费域名失效！\n","keywords":[],"articleBody":"保姆级教程：从零搭建免费Hugo PaperMod个人博客（GitHub永久部署） 手把手教小白搭建免费、无广告、高颜值、可自动更新的个人博客，基于 Hugo + PaperMod 主题 + GitHub 全自动部署，无需服务器、无需付费，一次搭建永久使用。\n一、核心原理：先搞懂整套博客运行逻辑 整套博客分为本地编写和云端部署两大模块，零基础也能轻松理解：\n本地电脑：安装工具、撰写博客文章、实时预览网页效果\nGitHub云端：自动打包网页代码、生成公开专属网址，全网可访问\n三件核心工具（人话翻译）：\nGit：文件传输工具，负责将本地博客文件同步到GitHub云端仓库（云端U盘）\nHugo Extended：静态网页生成工具，将纯文本笔记转换成精美网页\nGitHub：免费代码托管平台，实现网页自动构建、部署、公网访问\n二、环境准备：电脑必备软件安装（小白零难度） 1. 安装 Git（代码传输工具） 浏览器搜索「Git官网」，下载 Windows 正式版安装包\n全程默认安装，一路点击 Next，无需修改任何配置\n安装成功标识：桌面/文件夹右键，出现 Git Bash Here、Git GUI Here 选项\n小贴士：命令行无需手动敲代码，全程复制粘贴指令即可，不用死记命令！\n2. 安装 Hugo Extended 扩展版（核心必装） 重点提醒：必须安装 Extended 扩展版，普通版缺失主题功能，会导致博客报错！\n打开 Hugo 官方发布页，下载 Windows 端 .zip 压缩包\n解压压缩包，将内部 hugo.exe 单独放入纯英文无中文路径文件夹，示例：F:\\hugo\n将该文件夹添加到电脑系统环境变量，添加完成后重启 Git Bash\n验证安装：右键打开 Git Bash，输入 hugo version，输出版本号即安装成功\n3. 注册 GitHub 账号并创建仓库 GitHub 官网邮箱注册账号，用户名建议简短好记（后续仓库名必须和用户名完全一致）\n新建公开仓库，仓库名称严格遵循固定格式：你的用户名.github.io\n示例：GitHub 用户名为 xiaobai123，仓库名必须为 xiaobai123.github.io，名称错误会直接导致免费域名失效！\n三、本地搭建博客：配置PaperMod高颜值主题 步骤1：创建本地博客文件夹 在电脑任意磁盘新建纯英文、无空格、无中文文件夹，示例：F:\\my-blog\n进入文件夹空白处右键，打开 Git Bash Here，执行指令锁定工作目录：\ncd F:\\my-blog 步骤2：初始化Hugo空白站点 复制下方指令粘贴执行，生成博客底层配置文件：\nhugo new site . --force 步骤3：导入PaperMod主题 PaperMod 是 Hugo 主流简约高颜值主题，清爽无冗余特效，适配笔记、技术博客、随笔场景。\n依次执行两行指令，下载并初始化主题子模块： git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 进入路径 themes/PaperMod/exampleSite，复制文件夹内所有文件\n将复制的文件全部粘贴到博客根目录 my-blog\n根目录找到配置文件 hugo.yml，重命名为 config.yml（解决云端兼容bug）\n步骤4：博客基础个性化配置 用记事本打开根目录 config.yml，修改三大核心配置：\n配置核心域名（末尾斜杠 / 不可缺失，否则页面样式失效）： baseURL: \"https://你的用户名.github.io/\" theme: PaperMod canonifyURLs: true 找到 homeInfoParams 区块，自定义博客首页标题、个人简介、头像地址\n按需开启：站内搜索、顶部导航、暗色模式、文章归档等功能\n步骤5：本地实时预览博客 Git Bash 执行启动命令，开启本地实时预览：\nhugo server 浏览器访问 http://localhost:1313 即可查看博客效果，修改内容自动刷新，关闭Git窗口即可停止预览。\n四、云端部署：配置GitHub全自动发布 配置完成后，后续只需3行命令，即可自动更新线上博客，无需手动上传文件。\n步骤1：本地绑定GitHub远程仓库 依次执行以下指令，关联本地项目与云端仓库：\n# 初始化本地仓库 git init # 绑定云端仓库（替换为自己的仓库地址） git remote add origin https://github.com/你的用户名/你的用户名.github.io.git 步骤2：配置自动部署脚本（GitHub Actions） 该脚本可实现：代码推送后，云端自动打包、构建、发布网页。\n根目录新建文件夹：.github/workflows\n在文件夹内新建文件 hugo.yml，粘贴以下完整代码并保存：\nname: Hugo自动构建部署 on: push: branches: [ main ] jobs: build-deploy: runs-on: ubuntu-latest steps: - name: 拉取代码（包含主题子模块） uses: actions/checkout@v4 with: submodules: true fetch-depth: 0 - name: 安装Hugo扩展版 uses: peaceiris/actions-hugo@v2 with: hugo-version: latest extended: true - name: 构建静态网站 run: hugo --gc --minify - name: 部署到Pages uses: peaceiris/actions-gh-pages@v4 with: github_token: ${{ secrets.GITHUB_TOKEN }} publish_dir: ./public 避坑提醒：优先使用这套官方稳定脚本，更换其他脚本极易出现404、部署失败问题。\n步骤3：首次推送全部文件到云端 依次执行三行命令，完成首次博客初始化上传：\n# 缓存所有文件修改 git add . # 提交修改并备注 git commit -m \"初始化博客，配置PaperMod主题与自动部署\" # 推送代码到云端 git push --set-upstream origin main 步骤4：GitHub关键权限配置（解决90%部署报错） 推送完成后，进入GitHub仓库后台完成核心设置：\n进入仓库 Settings -Actions - General\n下滑找到 Workflow permissions，勾选 Read and write permissions 并保存（解决403权限报错）\n左侧进入 Pages 部署设置\nBuild and deployment 选择 Deploy from a branch，分支选 gh-pages，文件夹选择 / (root) 保存\n核心避坑：切勿选择GitHub Actions部署源，会与脚本不匹配，导致网站404！\n步骤5：访问上线博客 仓库顶部切换到 Actions，查看自动部署任务\n所有步骤显示绿色对勾即部署成功\n无痕浏览器访问 https://你的用户名.github.io，博客正式上线！\n五、日常使用：发文、改配置、更新博客通用教程 1. 新建博客文章 执行指令自动生成文章模板，文件默认存放于 content/posts/：\nhugo new posts/我的第一篇博客.md 打开md文件，顶部核心配置说明：\ntitle: \"我的第一篇博客\" date: 2026-06-20T12:00:00+08:00 draft: true 重要规则：draft: true 为草稿状态，线上不展示；发布前必须改为 draft: false！\n2. 更新博客通用流程 新增文章、修改简介、更换头像等所有更新，统一执行三行命令：\ngit add . git commit -m \"更新说明：新增xxx文章/修改首页配置\" git push 等待1-3分钟，GitHub Actions部署完成，刷新网页即可看到更新。\n3. 更换头像、修改首页信息 所有图片素材统一放入根目录static 文件夹\n修改 config.yml 中 homeInfoParams 配置（文字、图片路径）\n执行上述推送命令，自动同步线上内容\n4. 进阶：绑定自定义域名（免费无服务器） 阿里云/腾讯云购买域名，完成实名认证（国内必填）\n域名解析后台添加 CNAME 记录，主机记录自定义，记录值为 你的用户名.github.io\n博客根目录新建无后缀文件 CNAME，写入自己的专属域名（例：blog.xxx.com）\n修改 config.yml 的 baseURL 为自定义域名\n推送代码，等待10分钟-24小时解析生效，即可用专属域名访问博客\n六、高频报错踩坑解决方案 报错：Unable to locate config file 原因：配置文件名为 hugo.yml、重跑旧失败任务 解决：统一改为 config.yml，仅运行最新推送的部署任务\n部署403 denied 权限不足 原因：GitHub Actions无读写权限 解决：后台开启 Read and write permissions 权限\n部署成功但网页404空白 原因：Pages部署源不匹配、浏览器缓存 解决：切换为gh-pages 分支部署，无痕窗口等待5分钟刷新\nGit LF/CRLF换行警告 原因：Windows与云端系统换行符冲突（不影响使用） 优化：新建 .gitignore 文件，写入 public/ 忽略本地构建文件夹\n新建文章线上不显示 99%原因：未关闭草稿模式，确认 draft: false 再推送\n网页样式、图片全部丢失 原因：baseURL 末尾缺失 /，补全斜杠即可\n七、长期使用优化建议 public 为本地构建产物文件夹，加入 .gitignore 忽略，无需上传云端，精简仓库体积\n禁止直接修改 themes 主题原生文件，自定义样式在根目录新建文件覆盖，后续更新主题不丢失个性化配置\n仓库名必须严格匹配 用户名.github.io，大小写完全一致\n所有图片、附件统一放入 static 文件夹，文章通过相对路径引用\n草稿仅本地可见，正式发布前务必检查草稿状态\n结语 按照本教程操作，即可拥有一台永久免费、无广告、高度自定义的个人博客。无需服务器、无需续费、无需编程基础，适合存放技术笔记、日常随笔、读书笔记、学习总结，是专属自己的极简线上知识库。\n（注：部分内容可能由 AI 生成）\n","wordCount":"389","inLanguage":"en","datePublished":"2026-06-20T22:31:42+08:00","dateModified":"2026-06-20T22:31:42+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://aasd9022.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"},"publisher":{"@type":"Organization","name":"我的个人博客","logo":{"@type":"ImageObject","url":"https://aasd9022.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=header-nav><div class=logo><a href=https://aasd9022.github.io/ accesskey=h title="我的个人博客 (Alt + H)">我的个人博客</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
 <svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">我的第一篇笔记</h1><div class=post-meta><span title='2026-06-20 22:31:42 +0800 +0800'>June 20, 2026</span></div></header><footer class=post-footer><ul class=post-tags></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://aasd9022.github.io/>我的个人博客</a></span> ·
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">从零开始的Windows专属个人博客搭建全攻略（GitHub Pages+Hugo PaperMod）</h1><div class=post-meta><span title='2026-06-20 22:31:42 +0800 +0800'>June 20, 2026</span></div></header><div class="post-content md-content"><h1 id=保姆级教程从零搭建免费hugo-papermod个人博客github永久部署>保姆级教程：从零搭建免费Hugo PaperMod个人博客（GitHub永久部署）<a hidden class=anchor aria-hidden=true href=#保姆级教程从零搭建免费hugo-papermod个人博客github永久部署>#</a></h1><p>手把手教小白搭建<strong>免费、无广告、高颜值、可自动更新</strong>的个人博客，基于 Hugo + PaperMod 主题 + GitHub 全自动部署，无需服务器、无需付费，一次搭建永久使用。</p><h2 id=一核心原理先搞懂整套博客运行逻辑>一、核心原理：先搞懂整套博客运行逻辑<a hidden class=anchor aria-hidden=true href=#一核心原理先搞懂整套博客运行逻辑>#</a></h2><p>整套博客分为<strong>本地编写</strong>和<strong>云端部署</strong>两大模块，零基础也能轻松理解：</p><ol><li><p><strong>本地电脑</strong>：安装工具、撰写博客文章、实时预览网页效果</p></li><li><p><strong>GitHub云端</strong>：自动打包网页代码、生成公开专属网址，全网可访问</p></li></ol><p>三件核心工具（人话翻译）：</p><ul><li><p><strong>Git</strong>：文件传输工具，负责将本地博客文件同步到GitHub云端仓库（云端U盘）</p></li><li><p><strong>Hugo Extended</strong>：静态网页生成工具，将纯文本笔记转换成精美网页</p></li><li><p><strong>GitHub</strong>：免费代码托管平台，实现网页自动构建、部署、公网访问</p></li></ul><h2 id=二环境准备电脑必备软件安装小白零难度>二、环境准备：电脑必备软件安装（小白零难度）<a hidden class=anchor aria-hidden=true href=#二环境准备电脑必备软件安装小白零难度>#</a></h2><h3 id=1-安装-git代码传输工具>1. 安装 Git（代码传输工具）<a hidden class=anchor aria-hidden=true href=#1-安装-git代码传输工具>#</a></h3><ol><li><p>浏览器搜索「Git官网」，下载 Windows 正式版安装包</p></li><li><p>全程默认安装，一路点击 <code>Next</code>，无需修改任何配置</p></li><li><p>安装成功标识：桌面/文件夹右键，出现 <code>Git Bash Here</code>、<code>Git GUI Here</code> 选项</p></li></ol><blockquote><p>小贴士：命令行无需手动敲代码，全程复制粘贴指令即可，不用死记命令！</p></blockquote><h3 id=2-安装-hugo-extended-扩展版核心必装>2. 安装 Hugo Extended 扩展版（核心必装）<a hidden class=anchor aria-hidden=true href=#2-安装-hugo-extended-扩展版核心必装>#</a></h3><p><strong>重点提醒：必须安装 Extended 扩展版，普通版缺失主题功能，会导致博客报错！</strong></p><ol><li><p>打开 Hugo 官方发布页，下载 Windows 端 <code>.zip</code> 压缩包</p></li><li><p>解压压缩包，将内部 <code>hugo.exe</code> 单独放入<strong>纯英文无中文路径</strong>文件夹，示例：<code>F:\hugo</code></p></li><li><p>将该文件夹添加到电脑<strong>系统环境变量</strong>，添加完成后重启 Git Bash</p></li><li><p>验证安装：右键打开 Git Bash，输入 <code>hugo version</code>，输出版本号即安装成功</p></li></ol><h3 id=3-注册-github-账号并创建仓库>3. 注册 GitHub 账号并创建仓库<a hidden class=anchor aria-hidden=true href=#3-注册-github-账号并创建仓库>#</a></h3><ol><li><p>GitHub 官网邮箱注册账号，用户名建议简短好记（<strong>后续仓库名必须和用户名完全一致</strong>）</p></li><li><p>新建<strong>公开仓库</strong>，仓库名称严格遵循固定格式：<code>你的用户名.github.io</code></p></li></ol><p>示例：GitHub 用户名为 <code>xiaobai123</code>，仓库名必须为 <code>xiaobai123.github.io</code>，名称错误会直接导致免费域名失效！</p><h2 id=三本地搭建博客配置papermod高颜值主题>三、本地搭建博客：配置PaperMod高颜值主题<a hidden class=anchor aria-hidden=true href=#三本地搭建博客配置papermod高颜值主题>#</a></h2><h3 id=步骤1创建本地博客文件夹>步骤1：创建本地博客文件夹<a hidden class=anchor aria-hidden=true href=#步骤1创建本地博客文件夹>#</a></h3><p>在电脑任意磁盘新建<strong>纯英文、无空格、无中文</strong>文件夹，示例：<code>F:\my-blog</code></p><p>进入文件夹空白处右键，打开 <code>Git Bash Here</code>，执行指令锁定工作目录：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>cd F:\my-blog
+</span></span></code></pre></div><h3 id=步骤2初始化hugo空白站点>步骤2：初始化Hugo空白站点<a hidden class=anchor aria-hidden=true href=#步骤2初始化hugo空白站点>#</a></h3><p>复制下方指令粘贴执行，生成博客底层配置文件：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>hugo new site . --force
+</span></span></code></pre></div><h3 id=步骤3导入papermod主题>步骤3：导入PaperMod主题<a hidden class=anchor aria-hidden=true href=#步骤3导入papermod主题>#</a></h3><p>PaperMod 是 Hugo 主流简约高颜值主题，清爽无冗余特效，适配笔记、技术博客、随笔场景。</p><ol><li>依次执行两行指令，下载并初始化主题子模块：</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span style=display:flex><span>git submodule update --init --recursive
+</span></span></code></pre></div><ol><li><p>进入路径 <code>themes/PaperMod/exampleSite</code>，复制文件夹内<strong>所有文件</strong></p></li><li><p>将复制的文件全部粘贴到博客根目录 <code>my-blog</code></p></li><li><p>根目录找到配置文件 <code>hugo.yml</code>，<strong>重命名为 config.yml</strong>（解决云端兼容bug）</p></li></ol><h3 id=步骤4博客基础个性化配置>步骤4：博客基础个性化配置<a hidden class=anchor aria-hidden=true href=#步骤4博客基础个性化配置>#</a></h3><p>用记事本打开根目录 <code>config.yml</code>，修改三大核心配置：</p><ol><li><strong>配置核心域名</strong>（末尾斜杠 <code>/</code> 不可缺失，否则页面样式失效）：</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>baseURL: &#34;https://你的用户名.github.io/&#34;
+</span></span><span style=display:flex><span>theme: PaperMod
+</span></span><span style=display:flex><span>canonifyURLs: true
+</span></span></code></pre></div><ol><li><p>找到 <code>homeInfoParams</code> 区块，自定义博客首页标题、个人简介、头像地址</p></li><li><p>按需开启：站内搜索、顶部导航、暗色模式、文章归档等功能</p></li></ol><h3 id=步骤5本地实时预览博客>步骤5：本地实时预览博客<a hidden class=anchor aria-hidden=true href=#步骤5本地实时预览博客>#</a></h3><p>Git Bash 执行启动命令，开启本地实时预览：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>hugo server
+</span></span></code></pre></div><p>浏览器访问 <code>http://localhost:1313</code> 即可查看博客效果，修改内容自动刷新，关闭Git窗口即可停止预览。</p><h2 id=四云端部署配置github全自动发布>四、云端部署：配置GitHub全自动发布<a hidden class=anchor aria-hidden=true href=#四云端部署配置github全自动发布>#</a></h2><p>配置完成后，后续只需3行命令，即可自动更新线上博客，无需手动上传文件。</p><h3 id=步骤1本地绑定github远程仓库>步骤1：本地绑定GitHub远程仓库<a hidden class=anchor aria-hidden=true href=#步骤1本地绑定github远程仓库>#</a></h3><p>依次执行以下指令，关联本地项目与云端仓库：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span># 初始化本地仓库
+</span></span><span style=display:flex><span>git init
+</span></span><span style=display:flex><span># 绑定云端仓库（替换为自己的仓库地址）
+</span></span><span style=display:flex><span>git remote add origin https://github.com/你的用户名/你的用户名.github.io.git
+</span></span></code></pre></div><h3 id=步骤2配置自动部署脚本github-actions>步骤2：配置自动部署脚本（GitHub Actions）<a hidden class=anchor aria-hidden=true href=#步骤2配置自动部署脚本github-actions>#</a></h3><p>该脚本可实现：代码推送后，云端自动打包、构建、发布网页。</p><ol><li><p>根目录新建文件夹：<code>.github/workflows</code></p></li><li><p>在文件夹内新建文件 <code>hugo.yml</code>，粘贴以下完整代码并保存：</p></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>name: Hugo自动构建部署
+</span></span><span style=display:flex><span>on: push:
+</span></span><span style=display:flex><span>  branches: [ main ]
+</span></span><span style=display:flex><span>jobs:
+</span></span><span style=display:flex><span>  build-deploy:
+</span></span><span style=display:flex><span>    runs-on: ubuntu-latest
+</span></span><span style=display:flex><span>    steps:
+</span></span><span style=display:flex><span>      - name: 拉取代码（包含主题子模块）
+</span></span><span style=display:flex><span>        uses: actions/checkout@v4
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          submodules: true
+</span></span><span style=display:flex><span>          fetch-depth: 0
+</span></span><span style=display:flex><span>      - name: 安装Hugo扩展版
+</span></span><span style=display:flex><span>        uses: peaceiris/actions-hugo@v2
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          hugo-version: latest
+</span></span><span style=display:flex><span>          extended: true
+</span></span><span style=display:flex><span>      - name: 构建静态网站
+</span></span><span style=display:flex><span>        run: hugo --gc --minify
+</span></span><span style=display:flex><span>      - name: 部署到Pages
+</span></span><span style=display:flex><span>        uses: peaceiris/actions-gh-pages@v4
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          github_token: ${{ secrets.GITHUB_TOKEN }}
+</span></span><span style=display:flex><span>          publish_dir: ./public
+</span></span></code></pre></div><blockquote><p>避坑提醒：优先使用这套官方稳定脚本，更换其他脚本极易出现404、部署失败问题。</p></blockquote><h3 id=步骤3首次推送全部文件到云端>步骤3：首次推送全部文件到云端<a hidden class=anchor aria-hidden=true href=#步骤3首次推送全部文件到云端>#</a></h3><p>依次执行三行命令，完成首次博客初始化上传：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span># 缓存所有文件修改
+</span></span><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span># 提交修改并备注
+</span></span><span style=display:flex><span>git commit -m &#34;初始化博客，配置PaperMod主题与自动部署&#34;
+</span></span><span style=display:flex><span># 推送代码到云端
+</span></span><span style=display:flex><span>git push --set-upstream origin main
+</span></span></code></pre></div><h3 id=步骤4github关键权限配置解决90部署报错>步骤4：GitHub关键权限配置（解决90%部署报错）<a hidden class=anchor aria-hidden=true href=#步骤4github关键权限配置解决90部署报错>#</a></h3><p>推送完成后，进入GitHub仓库后台完成核心设置：</p><ol><li><p>进入仓库 <code>Settings</code> -<code>Actions</code> - <code>General</code></p></li><li><p>下滑找到 <code>Workflow permissions</code>，勾选 <strong>Read and write permissions</strong> 并保存（解决403权限报错）</p></li><li><p>左侧进入 <code>Pages</code> 部署设置</p></li><li><p><code>Build and deployment</code> 选择 <code>Deploy from a branch</code>，分支选 <code>gh-pages</code>，文件夹选择 <code>/ (root)</code> 保存</p></li></ol><blockquote><p>核心避坑：切勿选择GitHub Actions部署源，会与脚本不匹配，导致网站404！</p></blockquote><h3 id=步骤5访问上线博客>步骤5：访问上线博客<a hidden class=anchor aria-hidden=true href=#步骤5访问上线博客>#</a></h3><ol><li><p>仓库顶部切换到 <code>Actions</code>，查看自动部署任务</p></li><li><p>所有步骤显示绿色对勾即部署成功</p></li><li><p>无痕浏览器访问 <code>https://你的用户名.github.io</code>，博客正式上线！</p></li></ol><h2 id=五日常使用发文改配置更新博客通用教程>五、日常使用：发文、改配置、更新博客通用教程<a hidden class=anchor aria-hidden=true href=#五日常使用发文改配置更新博客通用教程>#</a></h2><h3 id=1-新建博客文章>1. 新建博客文章<a hidden class=anchor aria-hidden=true href=#1-新建博客文章>#</a></h3><p>执行指令自动生成文章模板，文件默认存放于 <code>content/posts/</code>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>hugo new posts/我的第一篇博客.md
+</span></span></code></pre></div><p>打开md文件，顶部核心配置说明：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>title: &#34;我的第一篇博客&#34;
+</span></span><span style=display:flex><span>date: 2026-06-20T12:00:00+08:00
+</span></span><span style=display:flex><span>draft: true
+</span></span></code></pre></div><p><strong>重要规则</strong>：<code>draft: true</code> 为草稿状态，线上不展示；发布前必须改为 <code>draft: false</code>！</p><h3 id=2-更新博客通用流程>2. 更新博客通用流程<a hidden class=anchor aria-hidden=true href=#2-更新博客通用流程>#</a></h3><p>新增文章、修改简介、更换头像等所有更新，统一执行三行命令：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Plain data-lang=Plain><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>git commit -m &#34;更新说明：新增xxx文章/修改首页配置&#34;
+</span></span><span style=display:flex><span>git push
+</span></span></code></pre></div><p>等待1-3分钟，GitHub Actions部署完成，刷新网页即可看到更新。</p><h3 id=3-更换头像修改首页信息>3. 更换头像、修改首页信息<a hidden class=anchor aria-hidden=true href=#3-更换头像修改首页信息>#</a></h3><ol><li><p>所有图片素材统一放入根目录<code>static</code> 文件夹</p></li><li><p>修改 <code>config.yml</code> 中 <code>homeInfoParams</code> 配置（文字、图片路径）</p></li><li><p>执行上述推送命令，自动同步线上内容</p></li></ol><h3 id=4-进阶绑定自定义域名免费无服务器>4. 进阶：绑定自定义域名（免费无服务器）<a hidden class=anchor aria-hidden=true href=#4-进阶绑定自定义域名免费无服务器>#</a></h3><ol><li><p>阿里云/腾讯云购买域名，完成实名认证（国内必填）</p></li><li><p>域名解析后台添加 <code>CNAME</code> 记录，主机记录自定义，记录值为 <code>你的用户名.github.io</code></p></li><li><p>博客根目录新建无后缀文件 <code>CNAME</code>，写入自己的专属域名（例：<code>blog.xxx.com</code>）</p></li><li><p>修改 <code>config.yml</code> 的 <code>baseURL</code> 为自定义域名</p></li><li><p>推送代码，等待10分钟-24小时解析生效，即可用专属域名访问博客</p></li></ol><h2 id=六高频报错踩坑解决方案>六、高频报错踩坑解决方案<a hidden class=anchor aria-hidden=true href=#六高频报错踩坑解决方案>#</a></h2><ul><li><p><strong>报错：Unable to locate config file</strong>
+原因：配置文件名为 <code>hugo.yml</code>、重跑旧失败任务
+解决：统一改为 <code>config.yml</code>，仅运行最新推送的部署任务</p></li><li><p><strong>部署403 denied 权限不足</strong>
+原因：GitHub Actions无读写权限
+解决：后台开启 <code>Read and write permissions</code> 权限</p></li><li><p><strong>部署成功但网页404空白</strong>
+原因：Pages部署源不匹配、浏览器缓存
+解决：切换为<code>gh-pages</code> 分支部署，无痕窗口等待5分钟刷新</p></li><li><p><strong>Git LF/CRLF换行警告</strong>
+原因：Windows与云端系统换行符冲突（不影响使用）
+优化：新建 <code>.gitignore</code> 文件，写入 <code>public/</code> 忽略本地构建文件夹</p></li><li><p><strong>新建文章线上不显示</strong>
+99%原因：未关闭草稿模式，确认 <code>draft: false</code> 再推送</p></li><li><p><strong>网页样式、图片全部丢失</strong>
+原因：<code>baseURL</code> 末尾缺失 <code>/</code>，补全斜杠即可</p></li></ul><h2 id=七长期使用优化建议>七、长期使用优化建议<a hidden class=anchor aria-hidden=true href=#七长期使用优化建议>#</a></h2><ol><li><p><code>public</code> 为本地构建产物文件夹，加入 <code>.gitignore</code> 忽略，无需上传云端，精简仓库体积</p></li><li><p>禁止直接修改 <code>themes</code> 主题原生文件，自定义样式在根目录新建文件覆盖，后续更新主题不丢失个性化配置</p></li><li><p>仓库名必须严格匹配 <code>用户名.github.io</code>，大小写完全一致</p></li><li><p>所有图片、附件统一放入 <code>static</code> 文件夹，文章通过相对路径引用</p></li><li><p>草稿仅本地可见，正式发布前务必检查草稿状态</p></li></ol><h2 id=结语>结语<a hidden class=anchor aria-hidden=true href=#结语>#</a></h2><p>按照本教程操作，即可拥有一台<strong>永久免费、无广告、高度自定义</strong>的个人博客。无需服务器、无需续费、无需编程基础，适合存放技术笔记、日常随笔、读书笔记、学习总结，是专属自己的极简线上知识库。</p><blockquote><p>（注：部分内容可能由 AI 生成）</p></blockquote></div><footer class=post-footer><ul class=post-tags></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://aasd9022.github.io/>我的个人博客</a></span> ·
 <span>Powered by
 <a href="https://gohugo.io/?utm_source=papermod" rel=noopener target=_blank>Hugo</a> &
 <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
