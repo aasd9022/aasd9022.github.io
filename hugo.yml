@@ -1,0 +1,8 @@
+# 基础URL（替换为你的实际博客地址）
+baseURL: "https://aasd9022.github.io/"
+# 语言（中文）
+languageCode: "zh-CN"
+# 博客标题
+title: "我的个人博客"
+# 主题
+theme: "PaperMod"
