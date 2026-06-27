@@ -19,14 +19,11 @@ jobs:
 
       - name: 设置Go代理
         run: |
-          echo "GOPROXY=https://goproxy.io,direct" >> $GITHUB_ENV
+          echo "GOPROXY=https://proxy.golang.org,https://goproxy.io,direct" >> $GITHUB_ENV
           echo "GO111MODULE=on" >> $GITHUB_ENV
 
       - name: 下载主题模块
-        run: hugo mod get -u ./...
-
-      - name: 整理模块依赖
-        run: hugo mod tidy
+        run: go get github.com/adityatelange/hugo-PaperMod@latest
 
       - name: 构建静态网站
         run: hugo --gc --minify

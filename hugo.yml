@@ -2,7 +2,6 @@ baseURL: "https://aasd9022.github.io/"
 languageCode: "zh-CN"
 locale: "zh-CN"
 title: "我的技术博客"
-theme: ["PaperMod"]
 canonifyURLs: true
 
 module:
