@@ -2,6 +2,7 @@
 title: "Git 完整操作手册"
 date: 2024-06-21T17:00:00+08:00
 draft: false
+tags: ["Git", "工具", "教程"]
 ---
 
 # Git 完整操作手册
