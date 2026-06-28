@@ -34,10 +34,10 @@ params:
   disableScrollToTop: true
 
   label:
-    text: "我的技术博客"
+    text: "留心语"
 
   homeInfoParams:
-    Title: "欢迎来到我的博客"
+    Title: "欢迎来到留心语"
     Content: "在这里分享技术心得、编程经验和生活感悟"
 
   editPost:
