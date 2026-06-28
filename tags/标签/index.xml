@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>标签 on 留心语</title><link>https://aasd9022.github.io/tags/%E6%A0%87%E7%AD%BE/</link><description>Recent content in 标签 on 留心语</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sun, 28 Jun 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://aasd9022.github.io/tags/%E6%A0%87%E7%AD%BE/index.xml" rel="self" type="application/rss+xml"/><item><title>从零开始的Windows专属个人博客——标签的添加</title><link>https://aasd9022.github.io/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84windows%E4%B8%93%E5%B1%9E%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%A0%87%E7%AD%BE%E7%9A%84%E6%B7%BB%E5%8A%A0/</link><pubDate>Sun, 28 Jun 2026 10:00:00 +0800</pubDate><guid>https://aasd9022.github.io/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84windows%E4%B8%93%E5%B1%9E%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%A0%87%E7%AD%BE%E7%9A%84%E6%B7%BB%E5%8A%A0/</guid><description>&lt;h1 id="从零开始的windows专属个人博客标签的添加"&gt;从零开始的Windows专属个人博客——标签的添加&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你是不是看着别人的博客，文章下面飘着一串五彩斑斓的标签，心里羡慕得不行？别急，今天咱们就来给你的博客也&amp;quot;贴贴标签&amp;quot;，让它看起来更专业、更有范儿！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="一标签是个啥能吃吗"&gt;一、标签是个啥？能吃吗？&lt;/h2&gt;
+&lt;p&gt;标签（Tags），说白了就是给你的文章&amp;quot;分类打标记&amp;quot;。就像超市里的商品贴着&amp;quot;特价&amp;quot;、&amp;ldquo;进口&amp;rdquo;、&amp;ldquo;无糖&amp;quot;的标签一样，你的文章也可以贴上&amp;quot;Git&amp;rdquo;、&amp;ldquo;教程&amp;rdquo;、&amp;ldquo;踩坑记录&amp;quot;这些标签。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;标签的好处&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;快速筛选&lt;/td&gt;
+&lt;td&gt;点击标签，一键找到所有相关文章&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;视觉美观&lt;/td&gt;
+&lt;td&gt;文章下方飘着一串标签，看着就很专业&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SEO优化&lt;/td&gt;
+&lt;td&gt;搜索引擎更喜欢有标签的网站&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="二papermod主题标签功能的原生玩家"&gt;二、PaperMod主题：标签功能的&amp;quot;原生玩家&amp;rdquo;&lt;/h2&gt;
+&lt;p&gt;好消息！你用的 &lt;strong&gt;PaperMod 主题&lt;/strong&gt;天生就支持标签功能，不需要你写任何代码，只需要在文章里&amp;quot;打个标记&amp;quot;就行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PaperMod 自动帮你做的事&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📋 自动生成 &lt;code&gt;/tags/&lt;/code&gt; 页面（标签云）&lt;/li&gt;
+&lt;li&gt;🏷️ 文章列表页显示标签&lt;/li&gt;
+&lt;li&gt;📄 文章详情页显示标签&lt;/li&gt;
+&lt;li&gt;🔍 点击标签自动筛选相关文章&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="三实操时间给你的文章贴标签"&gt;三、实操时间：给你的文章&amp;quot;贴标签&amp;quot;&lt;/h2&gt;
+&lt;h3 id="步骤1打开文章文件"&gt;步骤1：打开文章文件&lt;/h3&gt;
+&lt;p&gt;找到你的文章文件，比如 &lt;code&gt;content/posts/我的第一篇博客.md&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;用记事本、VS Code、或者任何编辑器打开它。&lt;/p&gt;
+&lt;h3 id="步骤2找到文章开头的那几行"&gt;步骤2：找到文章开头的那几行&lt;/h3&gt;
+&lt;p&gt;文章开头有一段&amp;quot;神秘代码&amp;quot;，叫做 &lt;strong&gt;Front Matter&lt;/strong&gt;（前言）。看起来像这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;title&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;我的第一篇博客&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;date&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;2026-06-28T10:00:00&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;+08&lt;/span&gt;:&lt;span style="color:#ae81ff"&gt;00&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;draft&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;这段代码告诉 Hugo：文章标题是啥、发布时间是啥、是不是草稿状态。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="步骤3加上-tags-字段"&gt;步骤3：加上 tags 字段&lt;/h3&gt;
+&lt;p&gt;在 Front Matter 里加上 &lt;code&gt;tags&lt;/code&gt; 字段，就像这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;title&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;我的第一篇博客&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;date&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;2026-06-28T10:00:00&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;+08&lt;/span&gt;:&lt;span style="color:#ae81ff"&gt;00&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;draft&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;tags&lt;/span&gt;: [&lt;span style="color:#e6db74"&gt;&amp;#34;Git&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;教程&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;踩坑&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：标签写在方括号 &lt;code&gt;[]&lt;/code&gt; 里，用双引号 &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt; 包裹，多个标签用逗号 &lt;code&gt;,&lt;/code&gt; 分隔。&lt;/p&gt;</description></item></channel></rss>
