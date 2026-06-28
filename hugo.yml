@@ -30,8 +30,8 @@ params:
   ShowShareButtons: true
   ShowRelatedPosts: true
 
-  disableThemeToggle: true
-  disableScrollToTop: true
+  disableThemeToggle: false
+  disableScrollToTop: false
 
   label:
     text: "留心语"
