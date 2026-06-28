@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>教程 on 留心语</title><link>https://aasd9022.github.io/tags/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on 留心语</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sun, 28 Jun 2026 14:00:00 +0800</lastBuildDate><atom:link href="https://aasd9022.github.io/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>从零开始的Windows专属个人博客——进阶功能解锁</title><link>https://aasd9022.github.io/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84windows%E4%B8%93%E5%B1%9E%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%E5%8A%9F%E8%83%BD%E8%A7%A3%E9%94%81/</link><pubDate>Sun, 28 Jun 2026 14:00:00 +0800</pubDate><guid>https://aasd9022.github.io/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84windows%E4%B8%93%E5%B1%9E%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%E5%8A%9F%E8%83%BD%E8%A7%A3%E9%94%81/</guid><description>&lt;h1 id="从零开始的windows专属个人博客进阶功能解锁"&gt;从零开始的Windows专属个人博客——进阶功能解锁&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>教程 on 留心语</title><link>https://aasd9022.github.io/tags/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on 留心语</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sun, 28 Jun 2026 15:00:00 +0800</lastBuildDate><atom:link href="https://aasd9022.github.io/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>从零开始的Windows专属个人博客——搜索功能</title><link>https://aasd9022.github.io/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84windows%E4%B8%93%E5%B1%9E%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</link><pubDate>Sun, 28 Jun 2026 15:00:00 +0800</pubDate><guid>https://aasd9022.github.io/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84windows%E4%B8%93%E5%B1%9E%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</guid><description>&lt;h1 id="从零开始的windows专属个人博客搜索功能"&gt;从零开始的Windows专属个人博客——搜索功能&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;想象一下：你的博客已经有几十篇文章，用户想找某个特定内容，结果只能一个个翻目录&amp;hellip;这时候，一个好用的搜索功能就像给你的博客装上了&amp;quot;Ctrl+F&amp;quot;，让用户分分钟找到想要的内容！今天我们就来给博客加上搜索功能！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="一为什么需要搜索功能"&gt;一、为什么需要搜索功能？&lt;/h2&gt;
+&lt;h3 id="用户场景"&gt;用户场景&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;❌ 没有搜索：用户找文章 → 翻目录 → 翻标签 → 放弃离开
+✅ 有搜索：用户找文章 → 输入关键词 → 立刻找到 → 开心阅读
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="搜索的价值"&gt;搜索的价值&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;价值&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;提升体验&lt;/td&gt;
+&lt;td&gt;用户快速找到想要的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;增加停留&lt;/td&gt;
+&lt;td&gt;搜索后往往会阅读多篇文章&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;提高回访&lt;/td&gt;
+&lt;td&gt;好用的搜索让用户愿意再来&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="二实现原理"&gt;二、实现原理&lt;/h2&gt;
+&lt;p&gt;PaperMod 主题的搜索基于 &lt;strong&gt;JSON 索引&lt;/strong&gt; 实现：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌─────────────┐ 生成 ┌─────────────┐ 加载 ┌─────────────┐
+│ 所有文章 │ ────────→ │ index.json │ ────────→ │ 搜索页面 │
+└─────────────┘ └─────────────┘ └─────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="核心原理"&gt;核心原理&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;生成索引&lt;/strong&gt;：Hugo 构建时自动生成 &lt;code&gt;index.json&lt;/code&gt;，包含所有文章标题、内容、标签&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载索引&lt;/strong&gt;：搜索页面加载时获取这个 JSON 文件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地搜索&lt;/strong&gt;：JavaScript 在浏览器中进行关键词匹配&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时显示&lt;/strong&gt;：输入关键词后立即显示匹配结果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="优点"&gt;优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;无需后端&lt;/strong&gt;：纯静态实现，不占用服务器资源&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;响应快速&lt;/strong&gt;：所有数据已在本地，搜索无延迟&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;隐私友好&lt;/strong&gt;：搜索不经过第三方服务器&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;易于部署&lt;/strong&gt;：和其他静态文件一样部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="三开启方法"&gt;三、开启方法&lt;/h2&gt;
+&lt;h3 id="第一步修改配置文件"&gt;第一步：修改配置文件&lt;/h3&gt;
+&lt;p&gt;打开 &lt;code&gt;hugo.yml&lt;/code&gt;，添加搜索配置：&lt;/p&gt;</description></item><item><title>从零开始的Windows专属个人博客——进阶功能解锁</title><link>https://aasd9022.github.io/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84windows%E4%B8%93%E5%B1%9E%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%E5%8A%9F%E8%83%BD%E8%A7%A3%E9%94%81/</link><pubDate>Sun, 28 Jun 2026 14:00:00 +0800</pubDate><guid>https://aasd9022.github.io/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84windows%E4%B8%93%E5%B1%9E%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%E5%8A%9F%E8%83%BD%E8%A7%A3%E9%94%81/</guid><description>&lt;h1 id="从零开始的windows专属个人博客进阶功能解锁"&gt;从零开始的Windows专属个人博客——进阶功能解锁&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;上一篇我们学会了给文章&amp;quot;贴标签&amp;quot;，今天咱们继续升级！解锁三个超级实用的功能：🌙 主题切换、⬆️ 返回顶部、🎮 404小游戏。让你的博客从&amp;quot;能用&amp;quot;变成&amp;quot;好用又好玩&amp;quot;！&lt;/p&gt;
 &lt;/blockquote&gt;
