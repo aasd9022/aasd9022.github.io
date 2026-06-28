@@ -1,0 +1,186 @@
+{{- define "main" -}}
+<style>
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.search-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.search-header h1 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+.search-input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+#search-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+#search-input:focus {
+    border-color: var(--primary);
+}
+.search-results {
+    list-style: none;
+}
+.search-result-item {
+    padding: 20px;
+    margin-bottom: 15px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.search-result-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.search-result-item a {
+    text-decoration: none;
+    color: inherit;
+}
+.search-result-item h3 {
+    font-size: 18px;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+.search-result-item .date {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+}
+.search-result-item .excerpt {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+.search-result-item .tags {
+    margin-top: 10px;
+}
+.search-result-item .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 12px;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    margin-right: 5px;
+    opacity: 0.8;
+}
+.search-result-item .tag:hover {
+    opacity: 1;
+}
+.no-results {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+}
+.no-results .icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+</style>
+
+<div class="search-container">
+    <div class="search-header">
+        <h1>🔍 搜索文章</h1>
+        <p>输入关键词，找到你想要的内容</p>
+    </div>
+    
+    <div class="search-input-wrapper">
+        <input type="text" id="search-input" placeholder="输入关键词搜索..." autofocus>
+    </div>
+    
+    <div id="search-results" class="search-results"></div>
+</div>
+
+<script>
+const searchInput = document.getElementById('search-input');
+const resultsContainer = document.getElementById('search-results');
+let searchIndex = [];
+
+// 加载搜索索引
+async function loadSearchIndex() {
+    try {
+        const response = await fetch('/index.json');
+        const data = await response.json();
+        searchIndex = data;
+    } catch (error) {
+        console.error('加载搜索索引失败:', error);
+        resultsContainer.innerHTML = '<div class="no-results"><div class="icon">😢</div><p>搜索索引加载失败，请刷新页面重试</p></div>';
+    }
+}
+
+// 搜索函数
+function search(query) {
+    if (!query.trim()) {
+        resultsContainer.innerHTML = '';
+        return;
+    }
+    
+    const lowerQuery = query.toLowerCase();
+    const results = searchIndex.filter(item => {
+        return item.title.toLowerCase().includes(lowerQuery) ||
+               item.content.toLowerCase().includes(lowerQuery) ||
+               (item.tags && item.tags.some(tag => tag.toLowerCase().includes(lowerQuery)));
+    });
+    
+    displayResults(results, query);
+}
+
+// 显示搜索结果
+function displayResults(results, query) {
+    if (results.length === 0) {
+        resultsContainer.innerHTML = `
+            <div class="no-results">
+                <div class="icon">🔍</div>
+                <p>没有找到与 "${query}" 相关的内容</p>
+                <p style="font-size: 14px; margin-top: 10px;">试试其他关键词？</p>
+            </div>
+        `;
+        return;
+    }
+    
+    resultsContainer.innerHTML = results.map(item => {
+        const date = new Date(item.date).toLocaleDateString('zh-CN');
+        const tags = item.tags ? item.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+        const excerpt = item.content ? item.content.substring(0, 150) + '...' : '';
+        
+        return `
+            <li class="search-result-item">
+                <a href="${item.permalink}">
+                    <h3>${item.title}</h3>
+                    <div class="date">📅 ${date}</div>
+                    <p class="excerpt">${excerpt}</p>
+                    ${tags ? `<div class="tags">${tags}</div>` : ''}
+                </a>
+            </li>
+        `;
+    }).join('');
+}
+
+// 监听输入
+searchInput.addEventListener('input', (e) => {
+    search(e.target.value);
+});
+
+// 回车搜索
+searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        search(e.target.value);
+    }
+});
+
+// 初始化
+loadSearchIndex();
+</script>
+{{- end -}}

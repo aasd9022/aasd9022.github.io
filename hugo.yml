@@ -32,6 +32,8 @@ params:
 
   disableThemeToggle: false
   disableScrollToTop: false
+  ShowSearch: true           # 启用搜索功能
+  SearchPageSize: 10         # 搜索结果每页显示数量
 
   label:
     text: "留心语"
@@ -74,4 +76,8 @@ markup:
 outputs:
   home:
     - HTML
-    - RSS
+    - JSON
+  page:
+    - HTML
+  section:
+    - HTML
